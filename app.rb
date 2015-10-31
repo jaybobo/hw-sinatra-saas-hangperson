@@ -64,7 +64,7 @@ class HangpersonApp < Sinatra::Base
   end
   
   get '/win' do
-    if @game.echeck_win_or_lose == :win
+    if @game.check_win_or_lose == :win
       erb :win
     else
       erb :show
@@ -72,7 +72,7 @@ class HangpersonApp < Sinatra::Base
   end
   
   get '/lose' do
-    if @game.echeck_win_or_lose == :lose
+    if @game.check_win_or_lose == :lose
       erb :lose
     else
       erb :show
