@@ -5,7 +5,9 @@
     <span class="error"><%= flash[:message] %></span>
   </p>
 <% end %>
-
+<% if !@valid %>
+  <p>You have already used that letter</p>
+<% end %>
 <p>
   Wrong Guesses:
   <span class="guesses"><%= @game.wrong_guesses %></span>
